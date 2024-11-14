@@ -10,7 +10,7 @@ $(document).ready(function() {
     var subreddit = subreddits[r%subreddits.length]
 
     // Load random shower thought quote
-    $.getJSON("https://www.reddit.com/r/"+subreddit+"/top.json?sort=top&t=all&limit=100", function(json) {
+    $.getJSON("https://www.reddit.com/r/"+subreddit+"/top.json?sort=top&t=month&limit=100", function(json) {
       var rand = Math.floor(Math.random() * 100);
       var post = json.data.children[rand].data;
       var quote = post.title;
