@@ -4,9 +4,11 @@ $(document).ready(function() {
     $('#loading').show();
     $('#content-overlay').hide();
 
+
+    var subreddits = ["quotes", "showerthoughts"]
+    var limit = 250
     
     var r = Math.floor(Math.random() * 100);
-    var subreddits = ["quotes", "showerthoughts"]
     var subreddit = subreddits[r%subreddits.length]
 
     // Load random shower thought quote
@@ -14,9 +16,14 @@ $(document).ready(function() {
       var rand = Math.floor(Math.random() * 100);
       var post = json.data.children[rand].data;
       var quote = post.title;
+      if (quote.length > limit){
+        quote = quote.substring(0,limit) + "..."
+      }
+      
+      
       var author = post.author;
       var quoteurl = post.permalink;
-  
+      
       $('#quote').text(quote);
       $('#author').html("u/" + author);
       $('#quoteurl').attr("href", "http://www.reddit.com" + quoteurl);
