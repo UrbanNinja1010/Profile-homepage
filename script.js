@@ -23,11 +23,19 @@ $(document).ready(function() {
       
       var author = post.author;
       var quoteurl = post.permalink;
-      
+      var upvotes = post.ups;
+      var downvotes = post.downs;
+
+
       $('#quote').text(quote);
       $('#author').html("u/" + author);
       $('#quoteurl').attr("href", "http://www.reddit.com" + quoteurl);
-      $('#quoteurl').html("r/" + subreddit);
+      $('#upvotes').attr("href", "http://www.reddit.com" + quoteurl);
+      $('#downvotes').attr("href", "http://www.reddit.com" + quoteurl);
+      $('#quoteurl').html("r/" + subreddit); 
+      $('#upvotes').html(upvotes);
+      $('#downvotes').html(downvotes);
+     
     });
   });
   
