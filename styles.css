@@ -23,13 +23,12 @@ body {
 }
 
 .quote {
-  margin: 0;
+  margin: 0px;
   font-size: 1.5rem;
   line-height: 1.5;
   color: #e0e0e0;
-  padding-left: 10px;
-  margin-left: 10px;
-  border-left: 3px solid #e0e0e0;
+  padding: 20px;
+  padding-top: 0px;
 }
 
 /* Search Bar */
