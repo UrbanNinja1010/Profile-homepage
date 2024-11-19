@@ -1,102 +1,159 @@
-/* Dark mode styling */
+/* General Styling */
 body {
-    background-color: #282c34;
-    color: #e0e0e0;
-  }
-
-  p{
-    margin-bottom: 0px;
-  }
-  
-  .card {
-    width: 300px;
-    margin-bottom: 15px;
-    background-color: #454c5a;
-    border: none;
-  }
-  
-  .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
-  }
-  
-  .btn-secondary {
-    background-color: #6c757d;
-    border-color: #6c757d;
-  }
-  
-  .btn-success {
-    background-color: #28a745;
-    border-color: #28a745;
-  }
-  
-  .btn-info {
-    background-color: #17a2b8;
-    border-color: #17a2b8;
-  }
-  
-  .btn-warning {
-    background-color: #ffc107;
-    border-color: #ffc107;
-  }
-  
-  /* Center content vertically */
-  .center-content {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .quotebox {
-    /* margin-bottom: 5rem !important; */
-    min-height: 300px; 
-    position: relative;
-  }
-
-
-  #author-note {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    font-size: 0.8rem;
-    color: #e0e0e0;
-  }
-  
-  #author-note a {
-    color: #b0c4de;
-    text-decoration: none;
-  }
-  
-  #author-note a:hover {
-    text-decoration: underline;
-  }
-
-  .quote {
-    padding: 1.5em;
-    margin: 1.5em 0;
-    position: relative;
+  background-color: #282c34;
+  color: #e0e0e0;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-.quote::before, .quote::after {
-    content: '';
-    position: absolute;
-    width: 30px;
-    height: 30px;
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
 }
 
-.quote::before {
-    top: 10px;
-    left: 0px;
-    border-top: 4px solid #e0e0e0;
-    border-left: 4px solid #e0e0e0;
+/* Quote Section */
+.quotebox {
+  padding: 0px;
+  padding-top: 20px;
+  min-height: 300px; /* Prevents layout shifting */
 }
 
-.quote::after {
-    bottom: 30px;
-    right: 0px;
-    border-bottom: 4px solid #e0e0e0;
-    border-right: 4px solid #e0e0e0;
+.quote {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #e0e0e0;
+  padding-left: 10px;
+  border-left: 3px solid #e0e0e0;
 }
 
+/* Search Bar */
+.searchbar form {
+  display: flex;
+}
+
+.searchbar input {
+  border-radius: 5px 0 0 5px;
+  border: 1px solid #ddd;
+}
+
+.searchbar button {
+  border-radius: 0 5px 5px 0;
+}
+
+/* Categories */
+.category {
+  background-color: #626264;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.category h3 {
+  color: #e0e0e0;
+  margin-bottom: 15px;
+}
+
+.category ul {
+  padding: 0;
+  margin: 0;
+}
+
+.category li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+/* General Button Styling for btn-primary */
+.btn-primary {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 20px;
+  margin: 5px 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  border-width: 0px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Color Variations Based on Index */
+ul.list-unstyled li:nth-child(1) .btn-primary {
+  background-color: #264653; 
+}
+
+ul.list-unstyled li:nth-child(2) .btn-primary {
+  background-color: #2a9d8f; 
+}
+
+ul.list-unstyled li:nth-child(3) .btn-primary {
+  background-color: #e9c46a; 
+}
+
+ul.list-unstyled li:nth-child(4) .btn-primary {
+  background-color: #f4a261; 
+}
+
+ul.list-unstyled li:nth-child(5) .btn-primary {
+  background-color: #e76f51; 
+}
+
+/* Hover Effects */
+.btn-primary:hover {
+  transform: scale(1.02);
+  text-decoration: none;
+}
+
+ul.list-unstyled li:nth-child(1) .btn-primary:hover {
+  background-color: #192F37;
+}
+
+ul.list-unstyled li:nth-child(2) .btn-primary:hover {
+  background-color: #1C685F;
+}
+
+ul.list-unstyled li:nth-child(3) .btn-primary:hover {
+  background-color: #C1931D;
+}
+
+ul.list-unstyled li:nth-child(4) .btn-primary:hover {
+  background-color: #D3670F;
+}
+
+ul.list-unstyled li:nth-child(5) .btn-primary:hover {
+  background-color: #B53819;
+}
+
+/* Quote Author Note Styling */
+#author-note {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 0.8rem;
+  color: #e0e0e0;
+  text-align: right;
+}
+
+#author-note a {
+  color: #b0c4de;
+  text-decoration: none;
+}
+
+#author-note a:hover {
+  text-decoration: underline;
+}
+
+#author-note .website-note {
+  margin-top: 4px;
+  font-size: 0.7rem;
+  color: #a9a9a9;
+  text-align: right;
+}
+
+#author-note p{
+  margin-bottom: 0px;
+}
