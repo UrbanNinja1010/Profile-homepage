@@ -160,3 +160,19 @@ ul.list-unstyled li:nth-child(5) .btn-primary:hover {
 #author-note p{
   margin-bottom: 0px;
 }
+
+
+
+/* Mobile Styling */
+@media (max-width: 990px) {
+  #author-note {
+      position: static;
+      text-align: center;
+      margin-top: 15px;
+      font-size: 1rem; /* Slightly larger font for readability */
+  }
+
+  #author-note .website-note {
+    text-align: center;
+  }
+}
