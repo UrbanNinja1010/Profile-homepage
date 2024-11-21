@@ -164,7 +164,7 @@ ul.list-unstyled li:nth-child(5) .btn-primary:hover {
 
 
 /* Mobile Styling */
-@media (max-width: 990px) {
+@media (max-width: 1590px) {
   #author-note {
       position: static;
       text-align: center;
