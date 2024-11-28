@@ -29,12 +29,13 @@ $(document).ready(function() {
 
       $('#quote').text(quote);
       $('#author').html("u/" + author);
-      $('#quoteurl').attr("href", "http://www.reddit.com" + quoteurl);
-      $('#upvotes').attr("href", "http://www.reddit.com" + quoteurl);
-      $('#downvotes').attr("href", "http://www.reddit.com" + quoteurl);
+      $('#author').attr("href", "http://www.reddit.com" + "/u/" + author);
       $('#quoteurl').html("r/" + subreddit); 
-      $('#upvotes').html(upvotes);
+      $('#quoteurl').attr("href", "http://www.reddit.com" + quoteurl);
       $('#downvotes').html(downvotes);
+      $('#downvotes').attr("href", "http://www.reddit.com" + quoteurl);
+      $('#upvotes').html(upvotes);
+      $('#upvotes').attr("href", "http://www.reddit.com" + quoteurl);
      
     });
   });
